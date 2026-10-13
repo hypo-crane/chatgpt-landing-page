@@ -1,0 +1,348 @@
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* Navigation bar */
+.navbar {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+/* OpenAI logo */
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    margin-left: 5px;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.work-link:hover {
+    color: #aaa;
+}
+
+/* Right-side navbar buttons */
+.nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-actions a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.search-btn,
+.menu-btn {
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.login-btn {
+    color: white;
+    background: #202020;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 15px;
+}
+
+.top-try-btn {
+    color: #000;
+    background: #fff;
+    border-radius: 30px;
+    padding: 11px 25px;
+    font-size: 15px;
+}
+
+.login-btn:hover {
+    background: #333;
+}
+
+.top-try-btn:hover,
+.main-btn:hover {
+    background: #ddd;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Search field */
+.search-box {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    top: 55px;
+    background: #222;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.search-box.active {
+    display: flex;
+    gap: 8px;
+}
+
+.search-box input {
+    background: #111;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Main hero section */
+.hero {
+    text-align: center;
+    padding-top: 125px;
+}
+
+/* Date and category */
+.post-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    margin-bottom: 42px;
+}
+
+.category {
+    color: #aaa;
+}
+
+/* Main heading */
+.hero h1 {
+    font-size: clamp(42px, 4.2vw, 78px);
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: 1.1;
+}
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 38px;
+}
+
+.main-btn {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 17px 26px;
+    font-size: 16px;
+}
+
+.work-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.work-link span {
+    font-size: 23px;
+    vertical-align: -2px;
+}
+
+/* Information card */
+.info-card {
+    width: min(845px, calc(100% - 40px));
+    min-height: 286px;
+    background: #202020;
+    border-radius: 8px;
+    margin: 59px auto 40px;
+    padding: 34px 40px;
+}
+
+/* Notice at the top of the card */
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.notice p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.refresh-icon {
+    font-size: 20px;
+}
+
+/* Horizontal line */
+.info-card hr {
+    border: none;
+    border-top: 1px solid #484848;
+    margin: 26px 0 35px;
+}
+
+/* Release notes section */
+.more-info p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 27px;
+}
+
+.release-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.release-link:hover {
+    color: #bbb;
+}
+
+/* Tablet and mobile screens */
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 12px 24px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .info-card {
+        margin-top: 50px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-actions {
+        gap: 5px;
+    }
+
+    .login-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .top-try-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 85px 16px 0;
+    }
+
+    .post-info {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .info-card {
+        width: calc(100% - 32px);
+        margin-top: 50px;
+        padding: 25px 20px;
+        min-height: auto;
+    }
+
+    .notice p,
+    .more-info p {
+        font-size: 14px;
+    }
+
+    .info-card hr {
+        margin: 24px 0;
+    }
+}
